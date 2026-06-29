@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SYSTEM // TERMINAL</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-phosphor="green">
+
+  <div class="crt">
+    <div class="monitor-case">
+      <div class="case-sheen" aria-hidden="true"></div>
+
+      <div class="crt-bezel">
+        <div class="screen">
+
+          <div class="scanlines"></div>
+          <div class="flicker"></div>
+          <div class="vignette"></div>
+          <div class="noise"></div>
+
+          <header class="topbar">
+            <span>SYS400 ONLINE</span>
+            <span id="clock">00:00:00</span>
+            <button id="phosphor-toggle" title="Toggle phosphor color">[ COLOR: GRN ]</button>
+          </header>
+
+          <div id="content-row" class="content-row">
+            <div class="content-spacer"></div>
+            <main id="feed" class="feed" aria-live="polite"></main>
+          </div>
+          <pre id="game-canvas" class="game-canvas" hidden></pre>
+
+          <form id="cmd-form" class="cmd-line" autocomplete="off">
+            <span class="cmd-prompt">C:\SYS400&gt;</span>
+            <input id="cmd-input" type="text" spellcheck="false" autocomplete="off" />
+          </form>
+
+          <nav class="fkeys">
+            <button class="fkey" data-target="home">F1=HOME</button>
+            <button class="fkey" data-target="about">F2=ABOUT</button>
+            <button class="fkey" data-target="projects">F3=PROJECTS</button>
+            <button class="fkey" data-target="contact">F4=CONTACT</button>
+            <button class="fkey" data-target="clear">F12=CLEAR</button>
+          </nav>
+
+        </div>
+      </div>
+
+      <div class="monitor-brand">
+        <span class="monitor-led" aria-hidden="true"></span>
+        <span class="monitor-brand-text">SYS400</span>
+      </div>
+
+      <div class="monitor-vents" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
